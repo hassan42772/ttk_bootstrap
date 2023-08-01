@@ -1,0 +1,18 @@
+import tkinter as tk
+root=tk.Tk()
+root.geometry("850x550")
+root.title("create menu bar")
+main1=tk.Menu(root)
+main2=tk.Menu(root)
+
+m1=tk.Menu(main1,tearoff=0)
+# root.config(menu=m1)
+m1.add_command(label="file")
+m1.add_command(label="edit")
+m1.add_command(label="selection")
+m1.add_command(label="view")
+m1.add_command(label="run")
+m1.add_command(label="exit",command=quit)
+main1.add_cascade(label="file",menu=m1)
+root.config(menu=main1)
+root.mainloop()
